@@ -1,4 +1,4 @@
-package dev.joseph;
+package dev.joseph.musician;
 
 public class MusicianBasic {
 
