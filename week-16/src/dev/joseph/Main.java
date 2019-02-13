@@ -1,15 +1,16 @@
 package dev.joseph;
 
+import dev.joseph.cv.CVAdvanced;
+import dev.joseph.cv.CVBasic;
 import dev.joseph.musician.MusicianAdvanced;
 import dev.joseph.musician.MusicianBasic;
 
 public class Main {
 
     public static void main(String[] args) {
-        firstExercise();
+        secondExercise();
     }
 
-    //--- Test for exercise 1.
     private static void firstExercise() {
         MusicianBasic musicianBasic = new MusicianBasic("Frank Zappa");
         System.out.println(musicianBasic.info());
@@ -39,5 +40,30 @@ public class Main {
 
         musicianAdvanced.removeInstrument("drums");
         System.out.println(musicianAdvanced.info());
+    }
+
+    private static void secondExercise() {
+        CVBasic cvBasic = new CVBasic("Frank N Steinisch", "Networking");
+        System.out.println(cvBasic.info());
+
+        cvBasic.removeSkill();
+        System.out.println(cvBasic.info());
+
+        cvBasic.addSkill("Programming");
+        System.out.println(cvBasic.info());
+
+        System.out.println(" ");
+
+        CVAdvanced cvAdvanced = new CVAdvanced("Frank N Steinisch", "Networking");
+        System.out.println(cvAdvanced.info());
+        
+        cvAdvanced.addSkill("C++");
+        System.out.println(cvAdvanced.info());
+
+        cvAdvanced.removeSkill("C++");
+        System.out.println(cvAdvanced.info());
+
+        cvAdvanced.removeSkill("Networking");
+        System.out.println(cvAdvanced.info());
     }
 }
