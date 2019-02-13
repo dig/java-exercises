@@ -56,7 +56,7 @@ public class Main {
 
         CVAdvanced cvAdvanced = new CVAdvanced("Frank N Steinisch", "Networking");
         System.out.println(cvAdvanced.info());
-        
+
         cvAdvanced.addSkill("C++");
         System.out.println(cvAdvanced.info());
 
