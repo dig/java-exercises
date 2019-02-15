@@ -25,7 +25,7 @@ public class Main {
         //--- Load data file into memory (using resources folder to store the file).
         LinkedList list = null;
         try {
-            list = this.loadIntoMemory("885013_data.txt");
+            list = this.loadIntoMemory(Constants.FILE_INPUT);
 
             //--- Loop over alphabet and count each character.
             FileWriter fw = new FileWriter(Constants.FILE_OUTPUT);
@@ -43,13 +43,13 @@ public class Main {
 
     }
 
-    private LinkedList loadIntoMemory(String fileName) throws IOException {
+    private LinkedList loadIntoMemory(File file) throws IOException {
         LinkedList result = new LinkedList();
 
         //--- Read each character from file.
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
-                        new FileInputStream(Constants.FILE_INPUT),
+                        new FileInputStream(file),
                         Charset.forName("UTF-8")));
 
         //--- Add to our linked list.
