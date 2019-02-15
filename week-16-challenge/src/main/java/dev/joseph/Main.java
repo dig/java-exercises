@@ -10,6 +10,10 @@ public class Main {
         myList.add('c');
 
         System.out.println(myList.toString());
+
+        myList.delete(1);
+
+        System.out.println(myList.toString());
     }
 
 }
