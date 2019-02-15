@@ -29,6 +29,8 @@ public class Main {
 
         System.out.println("Content: " + myList.toString());
         System.out.println("Size: " + myList.size());
+
+        System.out.println("Contains 'b': " + myList.contains('b'));
     }
 
 }

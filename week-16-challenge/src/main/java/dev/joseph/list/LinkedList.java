@@ -81,7 +81,18 @@ public class LinkedList {
     }
 
     public boolean contains(char character) {
-        return false;
+        Node cur = this.head;
+        boolean result = false;
+
+        while (cur != null) {
+            if (cur.getData() == character) {
+                result = true;
+            }
+
+            cur = cur.getNext();
+        }
+
+        return result;
     }
 
     //--- Override toString method.
