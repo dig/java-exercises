@@ -3,10 +3,15 @@ package dev.joseph.list;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+/*
+ * @author Joseph.
+ */
+
 public class Node {
 
+    @Getter
     private char data;
+    @Getter @Setter
     private Node next;
 
     public Node(char character, Node next) {

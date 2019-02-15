@@ -3,6 +3,10 @@ package dev.joseph.list;
 import lombok.Getter;
 import lombok.Setter;
 
+/*
+ * @author Joseph.
+ */
+
 @Getter @Setter
 public class LinkedList {
 
