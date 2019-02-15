@@ -1,4 +1,4 @@
-package dev.joseph;
+package dev.joseph.list;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -66,6 +66,22 @@ public class LinkedList {
             cur = cur.getNext();
             count++;
         }
+    }
+
+    public int size() {
+        Node cur = this.head;
+        int count = 0;
+
+        while (cur != null) {
+            cur = cur.getNext();
+            count++;
+        }
+
+        return count;
+    }
+
+    public boolean contains(char character) {
+        return false;
     }
 
     //--- Override toString method.

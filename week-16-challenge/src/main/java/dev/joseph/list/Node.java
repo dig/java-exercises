@@ -1,4 +1,4 @@
-package dev.joseph;
+package dev.joseph.list;
 
 import lombok.Getter;
 import lombok.Setter;
