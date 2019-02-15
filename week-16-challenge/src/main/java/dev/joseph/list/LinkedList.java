@@ -32,6 +32,22 @@ public class LinkedList {
 
     }
 
+    public char get(int index) {
+        Node cur = this.head;
+        int count = 0;
+
+        while (cur != null) {
+            if (count == index) {
+                return cur.getData();
+            }
+
+            cur = cur.getNext();
+            count++;
+        }
+
+        return '\u0000';
+    }
+
     public void delete(char character) {
         Node cur = this.head, prev = null;
 
@@ -93,6 +109,21 @@ public class LinkedList {
         }
 
         return result;
+    }
+
+    public int count(char character) {
+        Node cur = this.head;
+        int count = 0;
+
+        while (cur != null) {
+            if (cur.getData() == character) {
+                count++;
+            }
+
+            cur = cur.getNext();
+        }
+
+        return count;
     }
 
     //--- Override toString method.
