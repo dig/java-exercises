@@ -6,3 +6,4 @@ A directory of every Java exercise we did in the first year of my Computer Scien
 
 * **Week 16:** ArrayLists & Classes
 * **Week 16 Challenge:** Create own linked list implementation and order a giant list of characters.
+* **Week 17:** Enum Type
