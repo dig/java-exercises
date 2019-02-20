@@ -1,15 +1,16 @@
-package dev.joseph;
+package dev.joseph.secondexercise;
 
+import dev.joseph.firstexercise.Discount;
+import dev.joseph.firstexercise.Item;
 import lombok.Getter;
 
 import java.util.ArrayList;
 
-public class Basket {
+public class Stock {
 
-    @Getter
     private ArrayList<Item> items;
 
-    public Basket() {
+    public Stock() {
         items = new ArrayList<Item>();
     }
 
@@ -23,26 +24,10 @@ public class Basket {
         items.add(item);
     }
 
-    public String getNames() {
-        String retVal = "";
-
-        for (Item i : items) {
-            retVal += i.getName();
-        }
-
-        return retVal;
-    }
-
-    public double getAverageDiscount() {
-        double total = 0;
-
+    public void applyDiscount(Discount discount) {
         for (Item item : items) {
-            total += (1 - item.getDiscount().getValue());
+            item.setDiscount(discount);
         }
-
-        total = total / (double) items.size();
-
-        return total;
     }
-    
+
 }
